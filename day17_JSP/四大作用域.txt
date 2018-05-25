@@ -1,0 +1,33 @@
+1.servletContext
+	代表整个WEB应用的对象
+	生命周期:
+		当WEB应用被服务器加载时创建ServletContext对象
+		当WEB应用被服务器移出时销毁ServletContext对象
+	作用范围:
+		整个WEB应用范围内
+	主要功能:
+		在整个WEB应用范围内实现数据的共享
+
+2.session
+	代表一次会话的对象
+	生命周期:
+		在第一次调用request.getSession方法时创建sessio对象
+		销毁:(1)超时销毁(默认30分钟) (2)自杀(调用invalidate方法) (3)意外身亡
+	作用范围:
+		整个会话范围内
+	主要功能:
+		在整个会话范围内实现数据的共享
+3.request
+	生命周期:
+		一次请求开始时创建request对象, 一次请求结束时销毁request对象.
+	作用范围:
+		整个请求链
+	主要功能:
+		在整个请求链中共享数据
+4.pageContext
+	生命周期:
+		访问JSP开始时创建pageContext对象, 访问JSP结束时销毁pageContext对象
+	作用范围:
+		当前JSP中
+	主要功能:
+		在当前JSP中共享数据

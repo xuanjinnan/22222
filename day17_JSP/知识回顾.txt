@@ -1,0 +1,40 @@
+一.会话技术
+1.会话概述
+1.1.什么是会话?
+
+1.2.如何保存会话中产生的数据
+	Cookie+Session
+
+2.Cookie
+2.1.Cookie保存数据的原理
+
+2.2.Cookie的API
+(1)创建Cookie
+	Cookie cookie = new Cookie(String name, String value);
+(2)将cookie添加到response响应中
+	response.addCookie(cookie);
+(3)获取所有cookie对象组成的数组
+	Cookie[] cs = request.getCookies();
+(4)删除Cookie
+
+(5)Cookie的常用方法
+	getName()
+	getValue()
+	setValue()
+	setMaxAge()
+	setPath()
+	
+3.Session
+3.1.Session保存数据的原理
+
+3.2.session是一个域对象
+	setAttribute()
+	getAttribute()
+	removeAttribute();
+
+	生命周期: 创建: request.getSession();
+		超时销毁:
+		自杀:
+		意外身亡:
+	作用范围: 整个会话范围内
+	主要功能: 在整个会话范围内实现数据的共享
